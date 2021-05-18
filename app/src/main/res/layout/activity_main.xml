@@ -23,7 +23,6 @@
         android:id="@+id/ConvertButton"
         android:layout_width="234dp"
         android:layout_height="137dp"
-        android:onClick="updateResult"
         android:text="@string/convert"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
