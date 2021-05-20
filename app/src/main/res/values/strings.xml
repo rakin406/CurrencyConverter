@@ -5,11 +5,14 @@
     <string name="click_me">Click me!</string>
     <string name="_0">0</string>
     <string name="currency_converter">Currency Converter</string>
-    <string name="enter_amount">Enter amount</string>
     <string name="enter">enter</string>
     <string name="enter_it">Enter it</string>
     <string name="convert">Convert</string>
     <string name="enter_dollar">Enter dollar</string>
     <string name="_0_taka">0 taka</string>
     <string name="_0_0_taka">0.0 taka</string>
+    <string name="from">From:</string>
+    <string name="to">To:</string>
+    <string name="amount">Amount</string>
+
 </resources>

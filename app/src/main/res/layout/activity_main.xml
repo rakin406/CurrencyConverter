@@ -8,41 +8,89 @@
 
     <TextView
         android:id="@+id/result"
-        android:layout_width="285dp"
-        android:layout_height="170dp"
+        android:layout_width="358dp"
+        android:layout_height="122dp"
         android:gravity="center"
-        android:text="@string/_0_0_taka"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.921" />
+        app:layout_constraintVertical_bias="0.313" />
 
     <Button
-        android:id="@+id/ConvertButton"
-        android:layout_width="234dp"
-        android:layout_height="137dp"
+        android:id="@+id/convertButton"
+        android:layout_width="238dp"
+        android:layout_height="112dp"
         android:text="@string/convert"
-        android:textSize="34sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.53" />
+        app:layout_constraintVertical_bias="0.872" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/cash"
+        android:id="@+id/input"
         android:layout_width="333dp"
         android:layout_height="104dp"
-        android:hint="@string/enter_dollar"
+        android:hint="@string/amount"
         android:inputType="number"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.194" />
+        app:layout_constraintVertical_bias="0.604" />
+
+    <Spinner
+        android:id="@+id/fromCurrency"
+        android:layout_width="253dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.746"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <Spinner
+        android:id="@+id/toCurrency"
+        android:layout_width="254dp"
+        android:layout_height="41dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.751"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.143" />
+
+    <TextView
+        android:id="@+id/toCurrencyText"
+        android:layout_width="79dp"
+        android:layout_height="40dp"
+        android:text="@string/to"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.143" />
+
+    <TextView
+        android:id="@+id/fromCurrencyText"
+        android:layout_width="79dp"
+        android:layout_height="42dp"
+        android:text="@string/from"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
