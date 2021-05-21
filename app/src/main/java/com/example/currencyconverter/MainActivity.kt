@@ -1,7 +1,6 @@
 package com.example.currencyconverter
 
 import android.os.Bundle
-import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.convertButton
@@ -30,40 +29,31 @@ class MainActivity : AppCompatActivity() {
         // Set default currencies
         fromCurrency.setSelection(0)    // Dollar
         toCurrency.setSelection(1)  // Taka
-        var exchangeRate = 84.82
-        var convertedCurrency = "Taka"
-
-        fromCurrency.onItemSelectedListener = object: AdapterView.OnItemSelectedListener{
-            override fun onItemSelected(parent:AdapterView<*>, view: View, position: Int, id: Long){
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>){
-            }
-        }
-
-        toCurrency.onItemSelectedListener = object: AdapterView.OnItemSelectedListener{
-            override fun onItemSelected(parent:AdapterView<*>, view: View, position: Int, id: Long){
-                val currency = currencies[position]
-                if (currency == "Dollar") {
-                    exchangeRate = 0.012
-                } else if (currency == "Taka") {
-                    exchangeRate = 84.82
-                }
-                convertedCurrency = currency
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>){
-            }
-        }
 
         // React on button click
         convertButton.setOnClickListener {
+            val originalCurrency = fromCurrency.selectedItem.toString()
+            val convertedCurrency = toCurrency.selectedItem.toString()
+
+            // Set exchange rate based on both currencies
+            val exchangeRate = if (originalCurrency == "Taka" && convertedCurrency == "Dollar") {
+                0.012
+            } else {
+                84.82
+            }
+
             val et = findViewById<EditText>(R.id.input)
             val inputText = et.text.toString()
             if (inputText.isNotBlank()) {
                 // Convert currency to two decimal place
                 val amount = inputText.toDouble()
-                val convertedAmount = ((amount * exchangeRate) * 100.0).roundToInt() / 100.0
+
+                // Don't change input value if both currencies are the same
+                val convertedAmount: Double = if (originalCurrency == convertedCurrency) {
+                    amount
+                } else {
+                    ((amount * exchangeRate) * 100.0).roundToInt() / 100.0
+                }
 
                 // Show result
                 val result = findViewById<TextView>(R.id.result)

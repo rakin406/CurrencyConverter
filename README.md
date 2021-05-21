@@ -4,8 +4,8 @@ Currency converter android application.
 
 Goals:
 
+- [x] Improve user interface
 - [ ] Support all currencies
-- [ ] Improve user interface
 
-**This application currently only supports Dollar to Taka(not the other way
-around).** This is just a hobby project.
+**This application currently only supports Dollar to Taka and vice versa.** This is
+just a hobby project.
