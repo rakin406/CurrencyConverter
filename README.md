@@ -4,7 +4,7 @@ Currency converter android application.
 
 Screenshots:
 
-<img src="images/default-screenshot.png" width="200">         <img src="images/usage-screenshot.png" width="200">
+<img src="images/default-screenshot.png" width="250"> <img src="images/usage-screenshot.png" width="250">
 
 Goals:
 
