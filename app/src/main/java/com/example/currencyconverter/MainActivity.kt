@@ -29,8 +29,8 @@ class MainActivity : AppCompatActivity() {
         toCurrency.adapter = adapter
 
         // Set default currencies
-        fromCurrency.setSelection(0)    // Dollar
-        toCurrency.setSelection(1)  // Taka
+        fromCurrency.setSelection(7)    // USD
+        toCurrency.setSelection(6)  // Yen
 
         // React on button click
         convertButton.setOnClickListener {
@@ -62,7 +62,6 @@ class MainActivity : AppCompatActivity() {
      * Get exchange rate by checking the currencies
      */
     private fun getExchangeRate(originalCurrency: String, convertedCurrency: String): Double {
-        // TODO: Manage all currencies and exchange rates
         return if (originalCurrency == "BDT") {
             when (convertedCurrency) {
                 "Canadian Dollar" -> 0.014
@@ -89,6 +88,71 @@ class MainActivity : AppCompatActivity() {
                     1.0
                 }
             }
+        } else if (originalCurrency == "Chinese Yuan") {
+            when (convertedCurrency) {
+                "BDT" -> 13.18
+                "Canadian Dollar" -> 0.19
+                "Euro" -> 0.13
+                "Indian Rupee" -> 11.33
+                "Jamaican Dollar" -> 23.26
+                "Japanese Yen" -> 16.93
+                "USD" -> 0.16
+                else -> {
+                    1.0
+                }
+            }
+        } else if (originalCurrency == "Euro") {
+            when (convertedCurrency) {
+                "BDT" -> 103.34
+                "Canadian Dollar" -> 1.47
+                "Chinese Yuan" -> 7.84
+                "Indian Rupee" -> 88.81
+                "Jamaican Dollar" -> 182.30
+                "Japanese Yen" -> 132.73
+                "USD" -> 1.22
+                else -> {
+                    1.0
+                }
+            }
+        } else if (originalCurrency == "Indian Rupee") {
+            when (convertedCurrency) {
+                "BDT" -> 1.16
+                "Canadian Dollar" -> 0.017
+                "Chinese Yuan" -> 0.088
+                "Euro" -> 0.011
+                "Jamaican Dollar" -> 2.05
+                "Japanese Yen" -> 1.49
+                "USD" -> 0.014
+                else -> {
+                    1.0
+                }
+            }
+        } else if (originalCurrency == "Jamaican Dollar") {
+            when (convertedCurrency) {
+                "BDT" -> 0.57
+                "Canadian Dollar" -> 0.0081
+                "Chinese Yuan" -> 0.043
+                "Euro" -> 0.0055
+                "Indian Rupee" -> 0.49
+                "Japanese Yen" -> 0.73
+                "USD" -> 0.0067
+                else -> {
+                    1.0
+                }
+            }
+        } else if (originalCurrency == "Japanese Yen") {
+            when (convertedCurrency) {
+                "BDT" -> 0.78
+                "Canadian Dollar" -> 0.011
+                "Chinese Yuan" -> 0.059
+                "Euro" -> 0.0075
+                "Indian Rupee" -> 0.67
+                "Jamaican Dollar" -> 1.37
+                "USD" -> 0.0092
+                else -> {
+                    1.0
+                }
+            }
         } else if (originalCurrency == "USD") {
             when (convertedCurrency) {
                 "BDT" -> 84.83
@@ -98,13 +162,6 @@ class MainActivity : AppCompatActivity() {
                 "Indian Rupee" -> 72.91
                 "Jamaican Dollar" -> 149.65
                 "Japanese Yen" -> 108.93
-                else -> {
-                    1.0
-                }
-            }
-        } else if (originalCurrency == "BDT") {
-            when (convertedCurrency) {
-                "USD" -> 0.012
                 else -> {
                     1.0
                 }
