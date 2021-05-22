@@ -1,15 +1,15 @@
 # CurrencyConverter
-
 Currency converter android application.
 
-Screenshots:
+## Supported currencies
+Bangladeshi Taka(BDT), Canadian Dollar, Chinese Yuan, Euro, Indian Rupee,
+Jamaican Dollar, Japanese Yen, United States Dollar(USD)
 
+Screenshots:
 <img src="images/default-screenshot.png" width="250"> <img src="images/usage-screenshot.png" width="250">
 
 Goals:
-
 - [x] Improve user interface
 - [ ] Support all currencies
 
-**This application currently only supports Dollar to Taka and vice versa.** This is
-just a hobby project.
+This is just a hobby project :)
