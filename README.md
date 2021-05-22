@@ -4,8 +4,8 @@ Currency converter android application.
 
 Screenshots:
 
-![Default](images/default-screenshot.png?raw=true "Default screenshot")
-![Usage](images/usage-screenshot.png?raw=true "Usage screenshot")
+<img src="images/default-screenshot.png" width="500">
+<img src="images/usage-screenshot.png" width="500">
 
 Goals:
 
