@@ -3,7 +3,7 @@ Currency converter android application.
 
 ## Supported currencies
 Bangladeshi Taka(BDT), Canadian Dollar, Chinese Yuan, Euro, Indian Rupee,
-Jamaican Dollar, Japanese Yen, United States Dollar(USD)
+Jamaican Dollar, Japanese Yen, United States Dollar(USD).
 
 Screenshots:
 
